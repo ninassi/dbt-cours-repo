@@ -9,42 +9,42 @@ models:
         columns: ["ArtistId", "MediaTypeId", "GenreId", "AlbumId", "TrackId"]
     columns:
       - name: ArtistId
-        description: "Identifiant de l'artiste associé à la piste"
+        description: "Identifiant de l'artiste dans la dimension des artistes"
         data_type: numeric
         constraints:
           - type: foreign_key
             to: ref("dimArtist")
             to_columns: ["ArtistId"]
       - name: MediaTypeId
-        description: "Identifiant du type de média associé à la piste"
+        description: "Identifiant du type de média dans la dimension des types de médias"
         data_type: numeric
         constraints:
           - type: foreign_key
             to: ref("dimMediaType")
             to_columns: ["MediaTypeId"]
       - name: GenreId
-        description: "Identifiant du genre associé à la piste"
+        description: "Identifiant du genre dans la dimension des genres"
         data_type: numeric
         constraints:
           - type: foreign_key
             to: ref("dimGenre")
             to_columns: ["GenreId"]
       - name: AlbumId
-        description: "Identifiant de l'album associé à la piste"
+        description: "Identifiant de l'album dans la dimension des albums"
         data_type: numeric
         constraints:
           - type: foreign_key
             to: ref("dimAlbum")
             to_columns: ["AlbumId"]
       - name: TrackId
-        description: "Identifiant unique pour une piste"
+        description: "Identifiant de la piste dans la dimension des pistes"
         data_type: numeric
         constraints:
           - type: foreign_key
             to: ref("dimTrack")
             to_columns: ["TrackId"]
       - name: PlaylistId
-        description: "Identifiant de la playlist associée à la piste"
+        description: "Identifiant de la playlist dans la dimension des playlists"
         data_type: numeric
         constraints:
           - type: foreign_key

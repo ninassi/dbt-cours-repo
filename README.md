@@ -12,7 +12,7 @@ Pour lancer uniquement la création des vues à partir des requêtes d'analyse, 
 - dbt run --select tag:examen_queries
 
 Une capture d'écran des tables et vues créées dans Snowflake après l'exécution de ces commandes est disponible dans le dossier `images` de ce projet.
-
+- Examen_dbt_capture_snowflake.png
 
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
