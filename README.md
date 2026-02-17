@@ -1,10 +1,17 @@
-Welcome to your new dbt project!
+Bienvenue dans le projet de démonstration dbt pour le module Data Warehousing avec DBT (FR) et son examen !
 
-### Using the starter project
+### Concernant l'examen du module Data Warehousing avec DBT (FR)
 
-Try running the following commands:
-- dbt run
-- dbt test
+Pour lancer tous les modèles de l'examen, utilisez la commande suivante :
+- dbt run --select tag:examen_all
+
+Pour lancer uniquement la création des tables pour le schéma en étoile, utilisez la commande suivante :
+- dbt run --select tag:examen_star
+
+Pour lancer uniquement la création des vues à partir des requêtes d'analyse, utilisez la commande suivante :
+- dbt run --select tag:examen_queries
+
+Une capture d'écran des tables et vues créées dans Snowflake après l'exécution de ces commandes est disponible dans le dossier `images` de ce projet.
 
 
 ### Resources:
@@ -13,3 +20,5 @@ Try running the following commands:
 - Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
 - Find [dbt events](https://events.getdbt.com) near you
 - Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+
+
