@@ -1,0 +1,55 @@
+models:
+  - name: factTrack 
+    description: "Table de faits sur les pistes."
+    config:
+      contract:
+        enforced: true
+    constraints:
+      - type: primary_key
+        columns: ["ArtistId", "MediaTypeId", "GenreId", "AlbumId", "TrackId"]
+    columns:
+      - name: ArtistId
+        description: "Identifiant de l'artiste associé à la piste"
+        data_type: numeric
+        constraints:
+          - type: foreign_key
+            to: ref("dimArtist")
+            to_columns: ["ArtistId"]
+      - name: MediaTypeId
+        description: "Identifiant du type de média associé à la piste"
+        data_type: numeric
+        constraints:
+          - type: foreign_key
+            to: ref("dimMediaType")
+            to_columns: ["MediaTypeId"]
+      - name: GenreId
+        description: "Identifiant du genre associé à la piste"
+        data_type: numeric
+        constraints:
+          - type: foreign_key
+            to: ref("dimGenre")
+            to_columns: ["GenreId"]
+      - name: AlbumId
+        description: "Identifiant de l'album associé à la piste"
+        data_type: numeric
+        constraints:
+          - type: foreign_key
+            to: ref("dimAlbum")
+            to_columns: ["AlbumId"]
+      - name: TrackId
+        description: "Identifiant unique pour une piste"
+        data_type: numeric
+        constraints:
+          - type: foreign_key
+            to: ref("dimTrack")
+            to_columns: ["TrackId"]
+      - name: PlaylistId
+        description: "Identifiant de la playlist associée à la piste"
+        data_type: numeric
+        constraints:
+          - type: foreign_key
+            to: ref("dimPlaylist")
+            to_columns: ["PlaylistId"]
+      - name: PlaylistNumber
+        description: "Nombre de playlists associées à la piste"
+        data_type: numeric

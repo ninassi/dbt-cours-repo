@@ -1,0 +1,31 @@
+models:
+  - name: dimTrack
+    description: "Dimension sur les pistes."
+    config:
+      contract:
+        enforced: true
+    constraints:
+      - type: primary_key
+        columns: ["TrackId"]
+    columns:
+      - name: TrackId
+        description: "Identifiant unique pour une piste"
+        data_type: numeric
+        data_tests:
+          - not_null
+          - unique
+      - name: Name
+        description: "Nom de la piste"
+        data_type: varchar
+      - name: Composer
+        description: "Compositeur de la piste"
+        data_type: varchar
+      - name: Milliseconds
+        description: "Durée de la piste en millisecondes"
+        data_type: numeric
+      - name: Bytes
+        description: "Taille de la piste en octets"
+        data_type: numeric
+      - name: UnitPrice
+        description: "Prix unitaire de la piste"
+        data_type: numeric

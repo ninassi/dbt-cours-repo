@@ -1,0 +1,19 @@
+models:
+  - name: dimPlaylist
+    description: "Dimension sur les playlists."
+    config:
+      contract:
+        enforced: true
+    constraints:
+      - type: primary_key
+        columns: ["PlaylistId"]
+    columns:
+      - name: PlaylistId
+        description: "Identifiant unique pour une playlist"
+        data_type: numeric
+        data_tests:
+          - not_null
+          - unique
+      - name: Name
+        description: "Nom de la playlist"
+        data_type: varchar

@@ -1,0 +1,19 @@
+models:
+  - name: dimMediaType
+    description: "Dimension sur les types de médias."
+    config:
+      contract:
+        enforced: true
+    constraints:
+      - type: primary_key
+        columns: ["MediaTypeId"]
+    columns:
+      - name: MediaTypeId
+        description: "Identifiant unique pour un type de média"
+        data_type: numeric
+        data_tests:
+          - not_null
+          - unique
+      - name: Name
+        description: "Nom du type de média"
+        data_type: varchar

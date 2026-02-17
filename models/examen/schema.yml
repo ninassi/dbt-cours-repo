@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+    - name: EXAMEN_DATA
+      description: 'Tables pour examen de dbt'
+      database: DST_DB
+      schema: PUBLIC
+      tables:
+        - name: ALBUM
+          description: 'Table contenant les informations sur les albums.'
+        - name: ARTIST
+          description: 'Table contenant les informations sur les artistes.'
+        - name: GENRE
+          description: 'Table contenant les informations sur les genres.'
+        - name: MEDIATYPE
+          description: 'Table contenant les informations sur les types de médias.'
+        - name: PLAYLIST
+          description: 'Table contenant les informations sur les playlists.'
+        - name: PLAYLISTTRACK
+          description: 'Table de liaison entre les playlists et les pistes.'
+        - name: TRACK
+          description: 'Table contenant les informations sur les pistes.'

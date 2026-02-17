@@ -1,0 +1,19 @@
+models:
+  - name: dimGenre
+    description: "Dimension sur les genres."
+    config:
+      contract:
+        enforced: true
+    constraints:
+      - type: primary_key
+        columns: ["GenreId"]
+    columns:
+      - name: GenreId
+        description: "Identifiant unique pour un genre"
+        data_type: numeric
+        data_tests:
+          - not_null
+          - unique
+      - name: Name
+        description: "Nom du genre"
+        data_type: varchar

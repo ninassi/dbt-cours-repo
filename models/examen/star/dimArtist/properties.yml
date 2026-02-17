@@ -1,0 +1,25 @@
+models:
+  - name: dimArtist
+    description: "Dimension sur les artistes."
+    config:
+      contract:
+        enforced: true
+    constraints:
+      - type: primary_key
+        columns: ["ArtistId"]
+    columns:
+      - name: ArtistId
+        description: "Identifiant unique pour un artiste"
+        data_type: numeric
+        data_tests:
+          - not_null
+          - unique
+      - name: Name
+        description: "Nom de l'artiste"
+        data_type: varchar
+      - name: Birthyear
+        description: "Année de naissance de l'artiste"
+        data_type: numeric
+      - name: Country
+        description: "Pays de l'artiste"
+        data_type: varchar

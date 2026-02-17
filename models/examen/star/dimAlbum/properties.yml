@@ -1,0 +1,25 @@
+models:
+  - name: dimAlbum
+    description: "Dimension sur les albums."
+    config:
+      contract:
+        enforced: true
+    constraints:
+      - type: primary_key
+        columns: ["AlbumId"]
+    columns:
+      - name: AlbumId
+        description: "Identifiant unique pour un album"
+        data_type: numeric
+        data_tests:
+          - not_null
+          - unique
+      - name: Title
+        description: "Titre de l'album"
+        data_type: varchar
+      - name: ProdYear
+        description: "Année de production de l'album"
+        data_type: numeric
+      - name: CdNumber
+        description: "Numéro du CD"
+        data_type: numeric
